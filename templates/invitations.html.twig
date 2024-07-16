@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block title %}Invitations{% endblock %}
+{% block body %}
+    <h1>Invitations</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>AffiliateId</th>
+            </tr>
+        </thead>
+        <tbody id="users">
+            {% for user in users %}
+                <tr class="userinfo">
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.affiliateId }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
